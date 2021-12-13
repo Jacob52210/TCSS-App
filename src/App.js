@@ -23,7 +23,7 @@ function App() {
       <div className="container">
 
         <Routes>
-          <Route path="/TCSS-App/" exact element={<Greeting />} />
+          <Route path="/TCSS-App/" element={<Greeting />} />
           <Route path="/TCSS-App/recipes" element={<Recipes />} />
           <Route path="/TCSS-App/exercises" element={<Exercises />} />
           <Route path="/TCSS-App/trainers" element={<Trainers />} />
