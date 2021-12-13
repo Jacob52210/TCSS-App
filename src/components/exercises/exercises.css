@@ -1,0 +1,25 @@
+.options-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: fixed;
+	top: 45vh;
+	left: 50vw;
+	transform: translateX(-50%);
+	width: 80vw;
+}
+
+.option {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border-radius: 0px 20px 0px 20px;
+}
+
+.fa-check {
+	color: green;
+}
+
+.fa-times {
+	color: red;
+}
