@@ -23,26 +23,26 @@ function App() {
       <div className="container">
 
         <Routes>
-          <Route path="/" exact element={<Greeting />} />
-          <Route path="/recipes" element={<Recipes />} />
-          <Route path="/exercises" element={<Exercises />} />
-          <Route path="/trainers" element={<Trainers />} />
-          <Route path="/no-equipment" element={<NoGym />} />
-          <Route path="/equipment" element={<YesGym />} />
+          <Route path="/TCSS-App/" exact element={<Greeting />} />
+          <Route path="/TCSS-App/recipes" element={<Recipes />} />
+          <Route path="/TCSS-App/exercises" element={<Exercises />} />
+          <Route path="/TCSS-App/trainers" element={<Trainers />} />
+          <Route path="/TCSS-App/no-equipment" element={<NoGym />} />
+          <Route path="/TCSS-App/equipment" element={<YesGym />} />
         </Routes>
 
         <div className="nav-container">
           <i title='Exercises' className='fas fa-cog fa-2x' onClick={changeName}></i>
-          <Link to="/recipes">
+          <Link to="/TCSS-App/recipes">
             <i title='Recipe Search' className='fas fa-utensils fa-2x'></i>
           </Link>
-          <Link to="/">
-            <img src="/img/TCS-logo2.png" alt="TCSS Logo" title='Change Your Name' />
+          <Link to="/TCSS-App/">
+            <img src="/img/TCS-logo2.png" alt="TCSS Logo" />
           </Link>
-          <Link to="/exercises">
+          <Link to="/TCSS-App/exercises">
             <i title='Exercises' className='fas fa-dumbbell fa-2x'></i>
           </Link>
-          <Link to="/trainers">
+          <Link to="/TCSS-App/trainers">
             <i title='Trainers' className='fas fa-users fa-2x'></i>
           </Link>
          

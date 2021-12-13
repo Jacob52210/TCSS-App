@@ -10,10 +10,10 @@ class Exercises extends Component {
         <h3>Will you be working out in the gym today?</h3>
         <div className='options-container'>
         
-          <Link to="/no-equipment">
+          <Link to="/TCSS-App/no-equipment">
             <i className='fas fa-times fa-5x'></i>
           </Link>
-          <Link to="/equipment">
+          <Link to="/TCSS-App/equipment">
             <i className='fas fa-check fa-5x'></i>
           </Link>
           

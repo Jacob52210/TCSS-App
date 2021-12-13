@@ -22,7 +22,7 @@ class Greeting extends Component {
     <div className='greeting-container'>
 			<h1>{'Welcome ' + localStorage.getItem('userName') + '!'}</h1>
 
-			<h3>Please be patient as we develope the app.</h3>
+			<h3>Please be patient as we develop the app.</h3>
 		</div>
     )
   }
