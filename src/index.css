@@ -1,7 +1,5 @@
 body {
 	margin: 0;
-	background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(90, 0, 0, 1), black 95%);
-	background-attachment: fixed;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
