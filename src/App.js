@@ -1,4 +1,4 @@
-import { Route, Routes, Link, BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes, Link, HashRouter as Router } from "react-router-dom";
 import Exercises from "./components/exercises/exercises";
 import Recipes from "./components/recipes/recipes";
 import Greeting from "./components/greeting/greeting";
@@ -23,26 +23,26 @@ function App() {
       <div className="container">
 
         <Routes>
-          <Route path="/TCSS-App/" element={<Greeting />} />
-          <Route path="/TCSS-App/recipes" element={<Recipes />} />
-          <Route path="/TCSS-App/exercises" element={<Exercises />} />
-          <Route path="/TCSS-App/trainers" element={<Trainers />} />
-          <Route path="/TCSS-App/no-equipment" element={<NoGym />} />
-          <Route path="/TCSS-App/equipment" element={<YesGym />} />
+          <Route path="/" exact element={<Greeting />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/exercises" element={<Exercises />} />
+          <Route path="/trainers" element={<Trainers />} />
+          <Route path="/no-equipment" element={<NoGym />} />
+          <Route path="/equipment" element={<YesGym />} />
         </Routes>
 
         <div className="nav-container">
           <i title='Exercises' className='fas fa-cog fa-2x' onClick={changeName}></i>
-          <Link to="/TCSS-App/recipes">
+          <Link to="/recipes">
             <i title='Recipe Search' className='fas fa-utensils fa-2x'></i>
           </Link>
-          <Link to="/TCSS-App/">
-            <img src="/img/TCS-logo2.png" alt="TCSS Logo" />
+          <Link to="/">
+            <img src="./img/TCS-logo2.png" alt="TCSS Logo" />
           </Link>
-          <Link to="/TCSS-App/exercises">
+          <Link to="/exercises">
             <i title='Exercises' className='fas fa-dumbbell fa-2x'></i>
           </Link>
-          <Link to="/TCSS-App/trainers">
+          <Link to="/trainers">
             <i title='Trainers' className='fas fa-users fa-2x'></i>
           </Link>
          
