@@ -12,9 +12,9 @@ import './App.css';
 
 const changeName = () => {
   do {
-    localStorage.removeItem('userName');
-    localStorage.setItem('userName', prompt('Enter A New Name:'));
-  } while (localStorage.getItem('userName').trim() === '');
+    localStorage.removeItem('TCSSuserName');
+    localStorage.setItem('TCSSuserName', prompt('What would you like to change your name to?'));
+  } while (localStorage.getItem('TCSSuserName').trim() === '');
 };
 
 function App() {
