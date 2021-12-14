@@ -37,7 +37,7 @@ function App() {
             <i title='Recipe Search' className='fas fa-utensils fa-2x'></i>
           </Link>
           <Link to="/">
-            <img src="./img/TCS-logo2.png" alt="TCSS Logo" />
+            <img className="logo" src="./img/TCS-logo2.png" alt="TCSS Logo" />
           </Link>
           <Link to="/exercises">
             <i title='Exercises' className='fas fa-dumbbell fa-2x'></i>
