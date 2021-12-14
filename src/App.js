@@ -1,10 +1,9 @@
 import { Route, Routes, Link, HashRouter as Router } from "react-router-dom";
-import Exercises from "./components/exercises/exercises";
+
 import Recipes from "./components/recipes/recipes";
 import Greeting from "./components/greeting/greeting";
 import Trainers from "./components/trainers/trainers";
-import YesGym from "./components/exercises/equipment";
-import NoGym from "./components/exercises/no-equipment";
+import ExerciseArray from "./components/exercises/exercises";
 
 
 import './App.css';
@@ -25,10 +24,8 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Greeting />} />
           <Route path="/recipes" element={<Recipes />} />
-          <Route path="/exercises" element={<Exercises />} />
+          <Route path="/exercises" element={<ExerciseArray />} />
           <Route path="/trainers" element={<Trainers />} />
-          <Route path="/no-equipment" element={<NoGym />} />
-          <Route path="/equipment" element={<YesGym />} />
         </Routes>
 
         <div className="nav-container">
@@ -45,7 +42,6 @@ function App() {
           <Link to="/trainers">
             <i title='Trainers' className='fas fa-users fa-2x'></i>
           </Link>
-         
         </div>
 
       </div>
