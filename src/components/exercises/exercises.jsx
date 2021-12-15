@@ -7,6 +7,7 @@ import './body_parts.css';
 function ExerciseArray() {
 
   const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
   
 
 
@@ -19,14 +20,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
 
@@ -39,14 +43,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
 
@@ -59,14 +66,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
 
@@ -79,14 +89,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
 
@@ -99,14 +112,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
 
@@ -119,14 +135,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
 
@@ -139,14 +158,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
 
@@ -159,14 +181,17 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
   function lowerArmsAPIcall(){
@@ -178,34 +203,44 @@ function ExerciseArray() {
       "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
     }
     }).then(function(res) {  
+      if ( !res.ok ){
+        throw Error('Could not fetch the requested data. ');
+      }
       return res.json();
-    }).then(function(json) {
-      
+    })
+    .then(function(json) {
       //console.log(json);
       setData(json);
-    }).catch(err => {
-    console.error(err);
-  
+    })
+    .catch(err => {  
+      setError(err.message);
     });
   }
+
+  //--------- The function below is the modified fetch with error handling. --------------------------------
+
   function lowerLegsAPIcall(){
+    
   
     fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPart/lower%20legs", {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "exercisedb.p.rapidapi.com",
-      "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"
-    }
-    }).then(function(res) {  
-      return res.json();
-    }).then(function(json) {
-      
-      //console.log(json);
-      setData(json);
-    }).catch(err => {
-    console.error(err);
-  
-    });
+      "x-rapidapi-key": "a7db697272mshf83894164fb9651p19c31ejsn385335820313"}})
+
+      .then(function(res) {  
+        if ( !res.ok ){
+          throw Error('Could not fetch the requested data. ');
+        }
+        return res.json();
+      })
+      .then(function(json) {
+        //console.log(json);
+        setData(json);
+      })
+      .catch(err => {  
+        setError(err.message);
+      });
   }
 
 
@@ -236,8 +271,10 @@ function ExerciseArray() {
       </div>
 
       <div className='results-container'>
-        <h2>Your results are below:</h2>
-        {data.map(exercise => 
+        { error && <h4>{error}Please message us on <a href='https://www.facebook.com/takechargestrengthstudio'>
+          <i className="fab fa-facebook-square 3x"></i></a> to resolve the issue.</h4> }
+        {
+        data.map(exercise => 
           <div key={exercise.id} className='single-exercise'>
             <img className='gifs' src={exercise.gifUrl} alt={exercise.name} />
             <figcaption>{exercise.name.toUpperCase()}</figcaption>

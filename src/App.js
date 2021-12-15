@@ -29,18 +29,18 @@ function App() {
         </Routes>
 
         <div className="nav-container">
-          <i title='Exercises' className='fas fa-cog fa-2x' onClick={changeName}></i>
+          <i title='Exercises' className='fas fa-cog fa-2x nav-icon' onClick={changeName}></i>
           <Link to="/recipes">
-            <i title='Recipe Search' className='fas fa-utensils fa-2x'></i>
+            <i title='Recipe Search' className='fas fa-utensils fa-2x nav-icon'></i>
           </Link>
           <Link to="/">
             <img className="logo" src="./img/TCS-logo2.png" alt="TCSS Logo" />
           </Link>
           <Link to="/exercises">
-            <i title='Exercises' className='fas fa-dumbbell fa-2x'></i>
+            <i title='Exercises' className='fas fa-dumbbell fa-2x nav-icon'></i>
           </Link>
           <Link to="/trainers">
-            <i title='Trainers' className='fas fa-users fa-2x'></i>
+            <i title='Trainers' className='fas fa-users fa-2x nav-icon'></i>
           </Link>
         </div>
 

@@ -12,7 +12,6 @@ input:focus {
 
 .search-results {
 	width: 100vw;
-	height: fit-content;
 }
 
 .cards {
@@ -34,6 +33,6 @@ input:focus {
 
 hr {
 	margin: 1rem auto;
-	border-bottom: solid 5px white;
+	border-bottom: solid 2px white;
 	width: 80vw;
 }
