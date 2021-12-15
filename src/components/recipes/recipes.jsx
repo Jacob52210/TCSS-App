@@ -10,17 +10,30 @@ const Recipe = () => {
 	const [recipes, setRecipes] = useState([]);
 	const [search, setSearch] = useState('');
 	const [query, setQuery] = useState('Rhino');
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		getRecipes();
 	}, [query]);
 
 	const getRecipes = async () => {
-		const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${API_ID}&app_key=${API_KEY}&to=20`);
-		const data = await response.json();
-    console.log(data.hits);
-		setRecipes(data.hits);
-	};
+	
+		fetch(`https://api.edamam.com/search?q=${query}&app_id=${API_ID}&app_key=${API_KEY}&to=20`)
+
+      .then(function(res) {  
+        if ( !res.ok ){
+          throw Error('Could not fetch the requested data. ');
+        }
+        return res.json();
+      })
+      .then(function(json) {
+        console.log(json.hits);
+        setRecipes(json.hits);
+      })
+      .catch(err => {  
+        setError(err.message);
+      });
+		};
 
 	const updateSearch = (e) => {
 		setSearch(e.target.value);
@@ -43,6 +56,8 @@ const Recipe = () => {
 			</form>
 			
 			<div className='search-results'>
+			{ error && <h4>{error}Please message us on <a href='https://www.facebook.com/takechargestrengthstudio'>
+          <i className="fab fa-facebook-square 3x"></i></a> to resolve the issue.</h4> }
 				{recipes.map((recipe) => (
 					<Recipes
 						key={recipe.recipe.image}
