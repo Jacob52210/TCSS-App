@@ -220,18 +220,18 @@ function ExerciseArray() {
 
       <div className='body-parts-container'>
         <ul>
-          <li onClick={() => chestAPIcall()}>Chest</li>
-          <li onClick={() => backAPIcall()}>Back</li>
-          <li onClick={() => waistAPIcall()}>Waist / Abs</li>
-          <li onClick={() => upperArmsAPIcall()}>Upper Arms</li>
-          <li onClick={() => lowerArmsAPIcall()}>Lower Arms</li>
+          <li className='body-part-btn' onClick={() => chestAPIcall()}>Chest</li>
+          <li className='body-part-btn' onClick={() => backAPIcall()}>Back</li>
+          <li className='body-part-btn' onClick={() => waistAPIcall()}>Waist / Abs</li>
+          <li className='body-part-btn' onClick={() => upperArmsAPIcall()}>Upper Arms</li>
+          <li className='body-part-btn' onClick={() => lowerArmsAPIcall()}>Lower Arms</li>
         </ul>
         <ul>
-          <li onClick={() => neckAPIcall()}>Neck</li>
-          <li onClick={() => shouldersAPIcall()}>Shoulders</li>
-          <li onClick={() => cardioAPIcall()}>Cardio</li>
-          <li onClick={() => upperLegsAPIcall()}>Upper Legs</li>
-          <li onClick={() => lowerLegsAPIcall()}>Lower Legs</li>
+          <li className='body-part-btn' onClick={() => neckAPIcall()}>Neck</li>
+          <li className='body-part-btn' onClick={() => shouldersAPIcall()}>Shoulders</li>
+          <li className='body-part-btn' onClick={() => cardioAPIcall()}>Cardio</li>
+          <li className='body-part-btn' onClick={() => upperLegsAPIcall()}>Upper Legs</li>
+          <li className='body-part-btn' onClick={() => lowerLegsAPIcall()}>Lower Legs</li>
         </ul>
       </div>
 

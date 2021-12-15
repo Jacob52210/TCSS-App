@@ -15,7 +15,7 @@ ul {
 	padding: 0;
 }
 
-li {
+.body-part-btn {
 	width: 25vw;
 	height: fit-content;
 	font-size: 1rem;

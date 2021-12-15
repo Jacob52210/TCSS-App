@@ -1,0 +1,39 @@
+.search-form {
+	padding: 1rem;
+}
+
+input:focus {
+	outline: none;
+}
+
+.search-bar {
+	color: black;
+}
+
+.search-results {
+	width: 100vw;
+	height: fit-content;
+}
+
+.cards {
+	margin-bottom: 2rem;
+}
+
+.recipe-title {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 1rem;
+}
+
+.calories {
+	margin-bottom: 1rem;
+}
+
+.ingredients-container {
+	padding: 0 2rem;
+}
+
+hr {
+	margin: 1rem auto;
+	border-bottom: solid 5px white;
+	width: 80vw;
+}
