@@ -31,7 +31,7 @@ const Recipe = () => {
 				if ( json.count ===  0 ){
 					throw Error('No results.');
 				}
-        console.log(json.hits[0]);
+        // console.log(json.hits[0]);
         setRecipes(json.hits);
 				setError(null);
       })
@@ -52,7 +52,14 @@ const Recipe = () => {
 
 	return (
 		<div className='Recipe'>
-			<h1>Recipe Search</h1>
+			<p className='db-reference'>Powered by: 
+					<a className='reference-logo-container' href='https://www.edamam.com/'>
+						<img className='reference-logo2' src='./img/small-logo.png' alt='Edamam Logo'/>
+						<img className='reference-logo' src='./img/logo.png' alt='Edamam'/>
+					</a>
+			</p>
+
+			<h1 className='page-name'>Recipe Search</h1>
 			<form onSubmit={getSearch} className='search-form'>
 				<input className='search-bar' type='text' value={search} onChange={updateSearch} placeholder='Search' />
 				<button className='search-btn' type='submit'>

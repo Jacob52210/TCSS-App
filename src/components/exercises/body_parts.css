@@ -1,3 +1,9 @@
+.rapidAPI-logo {
+	height: 1rem;
+	width: auto;
+	filter: drop-shadow(2px 2px 2px black);
+}
+
 .body-parts-container {
 	display: flex;
 	flex-direction: row;

@@ -247,8 +247,13 @@ function ExerciseArray() {
   return (
 
     <div>
+      <p className='db-reference'>Powered by: 
+					<a className='reference-logo-container' href='https://rapidapi.com/hub'>
+						<img className='rapidAPI-logo' src='./img/rapidAPI-logo.svg' alt='Rapid API Logo'/>
+					</a>
+			</p>
       <div className='header-container'>
-        <h1>Exersices</h1>
+        <h1 className='page-name'>Exersices</h1>
         <h3>What would you like to workout today?</h3>
       </div>
       
