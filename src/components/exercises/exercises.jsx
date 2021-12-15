@@ -221,7 +221,7 @@ function ExerciseArray() {
 
   function lowerLegsAPIcall(){
     
-  
+
     fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPart/lower%20legs", {
     "method": "GET",
     "headers": {
@@ -235,16 +235,21 @@ function ExerciseArray() {
         return res.json();
       })
       .then(function(json) {
-        //console.log(json);
         setData(json);
       })
       .catch(err => {  
         setError(err.message);
       });
-  }
+    }
 
+    
 
-  return (
+    function updateUrl(url){
+      let newUrl = url.replace("http", "https");
+      return newUrl;
+    }
+
+    return (
 
     <div>
       <p className='db-reference'>Powered by: 
@@ -281,7 +286,7 @@ function ExerciseArray() {
         {
         data.map(exercise => 
           <div key={exercise.id} className='single-exercise'>
-            <img className='gifs' src={exercise.gifUrl} alt={exercise.name} />
+            <img className='gifs' src={updateUrl(exercise.gifUrl)} alt={exercise.name} />
             <figcaption>{exercise.name.toUpperCase()}</figcaption>
           </div>
           )}
