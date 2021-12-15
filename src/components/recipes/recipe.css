@@ -1,5 +1,5 @@
 .search-form {
-	padding: 1rem;
+	padding-bottom: 1rem;
 }
 
 input:focus {
@@ -8,10 +8,37 @@ input:focus {
 
 .search-bar {
 	color: black;
+	border-radius: 10px 0 0 10px;
+	padding: 0.5rem;
+}
+
+.search-btn {
+	background-color: black;
+	border-radius: 0 10px 10px 0;
+	padding: 0.5rem;
+}
+
+.fa-search {
+	color: red;
+}
+
+.follow-recipe-instructions {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 1rem;
 }
 
 .search-results {
 	width: 100vw;
+}
+
+.error-container {
+	margin: auto;
+	width: 80%;
+}
+
+.error-message {
+	color: red;
 }
 
 .cards {
@@ -19,12 +46,13 @@ input:focus {
 }
 
 .recipe-title {
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	margin: 1rem;
 }
 
 .calories {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .ingredients-container {

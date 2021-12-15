@@ -17,7 +17,7 @@
 	height: fit-content;
 }
 
-p {
+.quote {
 	font-family: cursive;
 	font-size: 2rem;
 	font-weight: bolder;

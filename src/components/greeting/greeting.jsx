@@ -23,7 +23,7 @@ class Greeting extends Component {
 			<h1>{'Welcome ' + localStorage.getItem('TCSSuserName') + '!'}</h1>
 			<h3>Please be patient as we develop the app.</h3>
 			<div className='quote-container'>
-				<p>"I don't chase. I attract. What belongs to me will find me. Simple."</p>
+				<p className="quote">"I don't chase. I attract. What belongs to me will find me. Simple."</p>
 			</div>
 		</div>
     )

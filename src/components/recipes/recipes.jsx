@@ -14,21 +14,26 @@ const Recipe = () => {
 
 	useEffect(() => {
 		getRecipes();
-	}, [query]);
+	}, [query]); // Not sure what this does. It throws a warning in console but if I remove it, the code breaks.
 
 	const getRecipes = async () => {
 	
 		fetch(`https://api.edamam.com/search?q=${query}&app_id=${API_ID}&app_key=${API_KEY}&to=20`)
 
       .then(function(res) {  
+				//console.log(res);
         if ( !res.ok ){
-          throw Error('Could not fetch the requested data. ');
+          throw Error(`Could not fetch the requested data. Error Code: ${res.status}`);
         }
         return res.json();
       })
       .then(function(json) {
-        console.log(json.hits);
+				if ( json.count ===  0 ){
+					throw Error('No results.');
+				}
+        console.log(json.hits[0]);
         setRecipes(json.hits);
+				setError(null);
       })
       .catch(err => {  
         setError(err.message);
@@ -56,8 +61,15 @@ const Recipe = () => {
 			</form>
 			
 			<div className='search-results'>
-			{ error && <h4>{error}Please message us on <a href='https://www.facebook.com/takechargestrengthstudio'>
-          <i className="fab fa-facebook-square 3x"></i></a> to resolve the issue.</h4> }
+				{ error && 
+					<div className='error-container'>
+						<h2 className='error-message'>{error}</h2>
+						{/* <h1>404</h1>
+						<h4>{error}Please message us on <a href='https://www.facebook.com/takechargestrengthstudio'>
+						<i className="fab fa-facebook-square 3x"></i></a> to resolve the issue.</h4> */}
+					</div> 
+				}
+				<p className='follow-recipe-instructions'>Select a recipe:</p>
 				{recipes.map((recipe) => (
 					<Recipes
 						key={recipe.recipe.image}
@@ -66,6 +78,7 @@ const Recipe = () => {
 						servings={recipe.recipe.yield}
 						image={recipe.recipe.image}
 						ingredients={recipe.recipe.ingredients}
+						url={recipe.recipe.shareAs}
 					/>
 				))}
 			</div>
