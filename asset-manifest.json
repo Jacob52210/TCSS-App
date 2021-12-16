@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/TCSS-App/static/css/main.7a131f06.chunk.css",
-    "main.js": "/TCSS-App/static/js/main.b1931a36.chunk.js",
-    "main.js.map": "/TCSS-App/static/js/main.b1931a36.chunk.js.map",
+    "main.css": "/TCSS-App/static/css/main.ad5bd045.chunk.css",
+    "main.js": "/TCSS-App/static/js/main.a2c2b34e.chunk.js",
+    "main.js.map": "/TCSS-App/static/js/main.a2c2b34e.chunk.js.map",
     "runtime-main.js": "/TCSS-App/static/js/runtime-main.8d55d0fd.js",
     "runtime-main.js.map": "/TCSS-App/static/js/runtime-main.8d55d0fd.js.map",
     "static/js/2.3cdc670a.chunk.js": "/TCSS-App/static/js/2.3cdc670a.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.79b2d28d.chunk.js": "/TCSS-App/static/js/3.79b2d28d.chunk.js",
     "static/js/3.79b2d28d.chunk.js.map": "/TCSS-App/static/js/3.79b2d28d.chunk.js.map",
     "index.html": "/TCSS-App/index.html",
-    "static/css/main.7a131f06.chunk.css.map": "/TCSS-App/static/css/main.7a131f06.chunk.css.map",
+    "static/css/main.ad5bd045.chunk.css.map": "/TCSS-App/static/css/main.ad5bd045.chunk.css.map",
     "static/js/2.3cdc670a.chunk.js.LICENSE.txt": "/TCSS-App/static/js/2.3cdc670a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8d55d0fd.js",
     "static/js/2.3cdc670a.chunk.js",
-    "static/css/main.7a131f06.chunk.css",
-    "static/js/main.b1931a36.chunk.js"
+    "static/css/main.ad5bd045.chunk.css",
+    "static/js/main.a2c2b34e.chunk.js"
   ]
 }
