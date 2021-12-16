@@ -60,10 +60,42 @@ const Greeting = () => {
 	return (
 	<div className='greeting-container'>
 		
-		<h1>{'Welcome ' + localStorage.getItem('TCSSuserName') + '!'}</h1>
-		<h3>Please be patient as we develop the app.</h3>
+		{/* <h1>{'Welcome ' + localStorage.getItem('TCSSuserName') + '!'}</h1> */}
+
+		<div className="scene">
+			<div className="banner">
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+				<div className="panel"></div>
+			</div>
+    <div className="screen"></div>
+  </div>
+
+		
 
 		<div className='quote-container'>
+			<h3>Please be patient as we develop the app.</h3>
 			{error && <h1>{error}</h1>}
 			{data && <p className="quote">{data.text}</p> }
 			{data && <p className="author">{data.author}</p> }

@@ -1,14 +1,13 @@
 .greeting-container {
-	height: fit-content;
-	width: 80vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 35%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+	min-height: 100vh;
+	width: 100vw;
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-perspective-origin: 50% calc(50% - 100px);
+	perspective-origin: 50% calc(50% - 100px);
 }
 
 .quote-container {
@@ -21,4 +20,191 @@
 	font-family: cursive;
 	font-size: 2rem;
 	font-weight: bolder;
+}
+
+.scene {
+	margin-top: 10vw;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.banner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-animation: rotate 20s infinite linear;
+	animation: rotate 20s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+	to {
+		-webkit-transform: rotateY(-360deg);
+		transform: rotateY(-360deg);
+	}
+}
+
+@keyframes rotate {
+	to {
+		-webkit-transform: rotateY(-360deg);
+		transform: rotateY(-360deg);
+	}
+}
+
+.panel {
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(22.8vw);
+	transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(22.8vw);
+	width: 6vw;
+	height: 15vw;
+	overflow: hidden;
+}
+
+.panel::before {
+	position: absolute;
+	left: var(--left);
+	content: 'Welcome to Take Charge!';
+	font-size: 10vw;
+	font-family: 'Black Ops One', cursive;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	color: #000000;
+	text-shadow: 0px 0px 3vw red, 0px 0px 3vw red;
+	animation: blink 2s linear infinite;
+}
+
+.panel:nth-child(1) {
+	--left: 0vw;
+	--angle: 0deg;
+}
+
+.panel:nth-child(2) {
+	--left: -6vw;
+	--angle: 15deg;
+}
+
+.panel:nth-child(3) {
+	--left: -12vw;
+	--angle: 30deg;
+}
+
+.panel:nth-child(4) {
+	--left: -18vw;
+	--angle: 45deg;
+}
+
+.panel:nth-child(5) {
+	--left: -24vw;
+	--angle: 60deg;
+}
+
+.panel:nth-child(6) {
+	--left: -30vw;
+	--angle: 75deg;
+}
+
+.panel:nth-child(7) {
+	--left: -36vw;
+	--angle: 90deg;
+}
+
+.panel:nth-child(8) {
+	--left: -42vw;
+	--angle: 105deg;
+}
+
+.panel:nth-child(9) {
+	--left: -48vw;
+	--angle: 120deg;
+}
+
+.panel:nth-child(10) {
+	--left: -54vw;
+	--angle: 135deg;
+}
+
+.panel:nth-child(11) {
+	--left: -60vw;
+	--angle: 150deg;
+}
+
+.panel:nth-child(12) {
+	--left: -66vw;
+	--angle: 165deg;
+}
+
+.panel:nth-child(13) {
+	--left: -72vw;
+	--angle: 180deg;
+}
+
+.panel:nth-child(14) {
+	--left: -78vw;
+	--angle: 195deg;
+}
+
+.panel:nth-child(15) {
+	--left: -84vw;
+	--angle: 210deg;
+}
+
+.panel:nth-child(16) {
+	--left: -90vw;
+	--angle: 225deg;
+}
+
+.panel:nth-child(17) {
+	--left: -96vw;
+	--angle: 240deg;
+}
+
+.panel:nth-child(18) {
+	--left: -102vw;
+	--angle: 255deg;
+}
+
+.panel:nth-child(19) {
+	--left: -108vw;
+	--angle: 270deg;
+}
+
+.panel:nth-child(20) {
+	--left: -114vw;
+	--angle: 285deg;
+}
+
+.panel:nth-child(21) {
+	--left: -120vw;
+	--angle: 300deg;
+}
+
+.panel:nth-child(22) {
+	--left: -126vw;
+	--angle: 315deg;
+}
+
+.panel:nth-child(23) {
+	--left: -132vw;
+	--angle: 330deg;
+}
+
+.panel:nth-child(24) {
+	--left: -138vw;
+	--angle: 345deg;
+}
+
+.screen {
+	position: absolute;
+	width: 45.6vw;
+	height: 22.5vw;
+	/* background-color: rgba(0, 0, 0, 0.1); */
+	backdrop-filter: blur(2px);
+	/* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.1)));
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); */
+	/* border-radius: 50%; */
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
