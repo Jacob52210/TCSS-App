@@ -14,7 +14,7 @@ const Recipes = ({ title, calories, image, ingredients, servings, url }) => {
 					<li className='ingredient' key={index}>{ingredient.text}</li>
 				))}
 			</ul> */}
-      <hr />
+      <hr className='recipe-seperater' />
 		</div>
 	);
 };

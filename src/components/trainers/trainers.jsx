@@ -1,12 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom';
+import './trainers.css';
 
-class Trainers extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Trainers</h1>
+
+function Trainers() {
+ 
+  return (
+    <div className='trainers-page'>
+      <h1>Meet Your Trainers!</h1>
+      <div className='trainer-links'>
+        <Link to="/trainers/Chrissy">
+          <h1>Chrissy</h1>
+        </Link>
+        <Link to="/trainers/James">
+          <h1>James</h1>
+        </Link>
+        <Link to="/trainers/Jake">
+          <h1>Jake</h1>
+        </Link>
       </div>
-    )
-  }
+      
+    </div>
+  )
+  
 }
 export default Trainers;

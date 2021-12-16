@@ -94,7 +94,7 @@ input:focus {
 	padding: 0 2rem;
 }
 
-hr {
+.recipe-seperater {
 	margin: 1rem auto;
 	border-bottom: solid 2px white;
 	width: 80vw;
