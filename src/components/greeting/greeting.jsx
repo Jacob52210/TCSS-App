@@ -62,43 +62,53 @@ const Greeting = () => {
 		
 		{/* <h1>{'Welcome ' + localStorage.getItem('TCSSuserName') + '!'}</h1> */}
 
-		<div className="scene">
-			<div className="banner">
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-				<div className="panel"></div>
-			</div>
-    <div className="screen"></div>
-  </div>
+			<div className="scene">
+
+				<div className="banner">
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+					<div className="panel"></div>
+				</div>
+
+			<div className="screen"></div>
+			
+		</div>
 
 		
 
 		<div className='quote-container'>
-			<h3>Please be patient as we develop the app.</h3>
+
+			
+			<i class="fas fa-quote-left"></i>
+			<h3 className='quote'>I don't chase, I attract. What belongs to me will find me. Simple.</h3>
+			<i class="fas fa-quote-right"></i>
+			
+
 			{error && <h1>{error}</h1>}
 			{data && <p className="quote">{data.text}</p> }
 			{data && <p className="author">{data.author}</p> }
+			{/* <h3>Please be patient as we develop the app.</h3> */}
 		</div>
 
 	</div>

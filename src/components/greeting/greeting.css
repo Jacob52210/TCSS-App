@@ -1,35 +1,66 @@
 .greeting-container {
 	min-height: 100vh;
-	width: 100vw;
-	display: -ms-grid;
-	display: grid;
-	place-items: center;
+	max-height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
-	-webkit-perspective-origin: 50% calc(50% - 100px);
-	perspective-origin: 50% calc(50% - 100px);
+	-webkit-perspective-origin: -50% calc(0%);
+	perspective-origin: 50% calc(0%);
 }
 
 .quote-container {
-	padding-top: 8rem;
+	position: relative;
 	width: 80vw;
-	height: fit-content;
+	min-height: 200px;
+	max-height: fit-content;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	margin: auto;
+}
+
+.fa-quote-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 4rem;
+	color: darkred;
+	z-index: -1;
+}
+
+.fa-quote-right {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 4rem;
+	color: darkred;
+	z-index: -1;
 }
 
 .quote {
 	font-family: cursive;
-	font-size: 2rem;
 	font-weight: bolder;
+	width: fit-content;
 }
 
 .scene {
-	margin-top: 10vw;
+	height: 50vw;
 	position: relative;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	width: 100vw;
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	/* background-color: black; */
+	/* backdrop-filter: blur(2px); */
 }
 
 .banner {
+	position: absolute;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -38,6 +69,21 @@
 	-webkit-animation: rotate 20s infinite linear;
 	animation: rotate 20s infinite linear;
 }
+
+/* .screen {
+	position: absolute;
+	place-items: center;
+	width: 45.6vw;
+	height: 22.5vw;
+	background-color: blue;
+	/* background-color: rgba(0, 0, 0, 0.1); 
+	backdrop-filter: blur(2px);
+	/* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.1)));
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); */
+/* border-radius: 50%; 
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+} */
 
 @-webkit-keyframes rotate {
 	to {
@@ -73,7 +119,7 @@
 	width: max-content;
 	color: #000000;
 	text-shadow: 0px 0px 3vw red, 0px 0px 3vw red;
-	animation: blink 2s linear infinite;
+	/* animation: blink 2s linear infinite; */
 }
 
 .panel:nth-child(1) {
@@ -194,17 +240,4 @@
 .panel:nth-child(24) {
 	--left: -138vw;
 	--angle: 345deg;
-}
-
-.screen {
-	position: absolute;
-	width: 45.6vw;
-	height: 22.5vw;
-	/* background-color: rgba(0, 0, 0, 0.1); */
-	backdrop-filter: blur(2px);
-	/* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.1)));
-	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); */
-	/* border-radius: 50%; */
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
 }
