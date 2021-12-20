@@ -25,6 +25,9 @@
 }
 
 .trainer-img {
+	width: auto;
+	height: 200px;
+	margin-bottom: 1rem;
 	filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
 }
 
