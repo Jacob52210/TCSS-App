@@ -3,6 +3,7 @@ import React from 'react';
 function James() {
   return (
     <div className='single-trainer-page'>
+      <img className="trainer-img" src="./img/James.png" alt="Jacob Flora" />
       <figcaption>
         <h1>James</h1>
         <br />

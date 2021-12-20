@@ -15,10 +15,17 @@
 }
 
 .single-trainer-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	min-height: 100vh;
 	margin: auto;
-	background-color: black;
 	padding: 1rem;
+}
+
+.trainer-img {
+	filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
 }
 
 .trainer-description {

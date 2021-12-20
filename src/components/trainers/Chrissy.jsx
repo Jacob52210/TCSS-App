@@ -3,7 +3,7 @@ import React from 'react';
 function Chrissy() {
   return (
     <div className='single-trainer-page'>
-      <img className="Chrissy-img" src="./img/Chrissy.png" alt="Chrissy Mason" />
+      <img className="trainer-img" src="./img/Chrissy.png" alt="Chrissy Mason" />
       <figcaption>
         <h1>Chrissy Mason</h1>
         <br />
