@@ -13,3 +13,14 @@
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 }
+
+.single-trainer-page {
+	min-height: 100vh;
+	margin: auto;
+	background-color: black;
+	padding: 1rem;
+}
+
+.trainer-description {
+	font-size: 0.75rem;
+}

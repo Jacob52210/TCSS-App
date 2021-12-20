@@ -24,6 +24,35 @@ const Greeting = () => {
   const [error, setError] = useState(null);
 	const quote = localStorage.getItem('TCSS-quote');
 
+	const hour = 1;
+	let time = 24;
+	
+
+	// setInterval(updateCountdown, 1000);
+
+	function updateCountdown() {
+		let sec = Math.floor(hour * time * 60 );
+		let min = Math.floor(sec * 60);
+		let hrs = Math.floor(min * 60);
+
+		sec = sec < 10 ? '0' + sec : sec;
+
+		if( `${hrs}:${min}:${sec}` === `0:00`){
+			console.log('Blast Off!')
+		}
+
+		console.log(`${hrs}:${min}:${sec}`);
+		time--;
+	}
+
+
+
+
+
+
+
+
+
 	function greetingAPIcall() {
 
 		if(quote === null || quote === undefined || quote === ''){
@@ -53,9 +82,9 @@ const Greeting = () => {
 			});
 			
 		}
-
-		
 	}
+
+
 	
 	return (
 	<div className='greeting-container'>
@@ -100,9 +129,11 @@ const Greeting = () => {
 		<div className='quote-container'>
 
 			
-			<i class="fas fa-quote-left"></i>
+			<i className="fas fa-quote-left"></i>
 			<h3 className='quote'>I don't chase, I attract. What belongs to me will find me. Simple.</h3>
-			<i class="fas fa-quote-right"></i>
+			
+			
+			<i className="fas fa-quote-right"></i>
 			
 
 			{error && <h1>{error}</h1>}

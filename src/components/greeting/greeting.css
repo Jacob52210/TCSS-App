@@ -70,21 +70,6 @@
 	animation: rotate 20s infinite linear;
 }
 
-/* .screen {
-	position: absolute;
-	place-items: center;
-	width: 45.6vw;
-	height: 22.5vw;
-	background-color: blue;
-	/* background-color: rgba(0, 0, 0, 0.1); 
-	backdrop-filter: blur(2px);
-	/* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.1)));
-	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); */
-/* border-radius: 50%; 
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-} */
-
 @-webkit-keyframes rotate {
 	to {
 		-webkit-transform: rotateY(-360deg);
@@ -112,7 +97,7 @@
 	position: absolute;
 	left: var(--left);
 	content: 'Welcome to Take Charge!';
-	font-size: 10vw;
+	font-size: 8vw;
 	font-family: 'Black Ops One', cursive;
 	width: -webkit-max-content;
 	width: -moz-max-content;

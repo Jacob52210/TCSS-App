@@ -7,7 +7,7 @@ function Trainers() {
  
   return (
     <div className='trainers-page'>
-      <h1>Meet Your Trainers!</h1>
+      <h1>{localStorage.getItem('TCSSuserName')}, meet your trainers!</h1>
       <div className='trainer-links'>
         <Link to="/trainers/Chrissy">
           <h1>Chrissy</h1>

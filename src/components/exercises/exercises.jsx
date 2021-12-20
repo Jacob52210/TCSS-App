@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './body_parts.css';
 
 
@@ -8,7 +9,7 @@ function ExerciseArray() {
 
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  
+
 
 
   function chestAPIcall(){
@@ -259,7 +260,7 @@ function ExerciseArray() {
 			</p>
       <div className='header-container'>
         <h1 className='page-name'>Exersices</h1>
-        <h3>What would you like to workout today?</h3>
+        <h3>What would you like to workout today {localStorage.getItem('TCSSuserName')}?</h3>
       </div>
       
 

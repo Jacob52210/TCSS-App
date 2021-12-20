@@ -28,7 +28,10 @@
 
 .nav-icon {
 	color: rgb(0, 0, 0);
-	filter: drop-shadow(0px 0px 2px rgb(255, 0, 0));
+	filter: drop-shadow(0px 0px 2px rgb(146, 18, 18));
+}
+
+.active {
 	animation: blink 2s linear infinite;
 }
 
@@ -36,7 +39,6 @@
 	height: 5rem;
 	width: auto;
 	filter: drop-shadow(0px 0px 2px rgb(255, 0, 0));
-	animation: blink 2s linear infinite;
 }
 
 .hidden-menu-btn {
@@ -47,7 +49,6 @@
 	bottom: 1rem;
 	left: 50%;
 	transform: translateX(-50%);
-	animation: blink 2s linear infinite;
 }
 
 @keyframes blink {

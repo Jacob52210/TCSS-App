@@ -22,7 +22,10 @@ const changeName = () => {
   } while (localStorage.getItem('TCSSuserName').trim() === '');
 };
 
+
 function App() {
+  
+
   return (
     <Router>
       <div className="container">
@@ -38,15 +41,17 @@ function App() {
           <Route path="/hidden_menu" element={<HiddenMenu />} />
         </Routes>
 
+        
+
         <div className="nav-container">
-          
+
           <div className="icon-container">
             <i title='Exercises' className='fas fa-cog fa-2x nav-icon' onClick={changeName}></i>
             <Link to="/recipes">
               <i title='Recipe Search' className='fas fa-utensils fa-2x nav-icon'></i>
             </Link>
             <Link to="/">
-              <img className="logo" src="./img/TCS-logo2.png" alt="TCSS Logo" />
+              <img className="logo active" src="./img/TCS-logo2.png" alt="TCSS Logo" />
             </Link>
             <Link to="/exercises">
               <i title='Exercises' className='fas fa-dumbbell fa-2x nav-icon'></i>
