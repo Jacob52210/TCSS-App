@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import './body_parts.css';
 
 
@@ -259,7 +258,7 @@ function ExerciseArray() {
 					</a>
 			</p>
       <div className='header-container'>
-        <h1 className='page-name'>Exersices</h1>
+        <h1 className='page-name'>Exercises</h1>
         <h3>What would you like to workout today {localStorage.getItem('TCSSuserName')}?</h3>
       </div>
       
